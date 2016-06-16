@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
+use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Setting\Entities\Setting;
 use Modules\Setting\Facades\Settings as SettingsFacade;
 use Modules\Setting\Repositories\Cache\CacheSettingDecorator;
@@ -11,6 +12,7 @@ use Modules\Setting\Support\Settings;
 
 class SettingServiceProvider extends ServiceProvider
 {
+    use CanPublishConfiguration;
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -35,6 +37,11 @@ class SettingServiceProvider extends ServiceProvider
             $loader = AliasLoader::getInstance();
             $loader->alias('Settings', SettingsFacade::class);
         });
+    }
+
+    public function boot()
+    {
+        $this->publishConfig('setting', 'permissions');
     }
 
     /**
