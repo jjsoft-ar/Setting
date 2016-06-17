@@ -2,7 +2,6 @@
 return [
     'setting.settings' => [
         'index',
-        'getModuleSettings',
-        'store',
+        'edit',
     ],
 ];
