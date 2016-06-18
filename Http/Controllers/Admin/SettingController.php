@@ -2,12 +2,14 @@
 
 use Illuminate\Session\Store;
 use Modules\Core\Http\Controllers\Admin\AdminBaseController;
+use Modules\Core\Traits\CanRequireAssets;
 use Modules\Setting\Http\Requests\SettingRequest;
 use Modules\Setting\Repositories\SettingRepository;
 use Pingpong\Modules\Module;
 
 class SettingController extends AdminBaseController
 {
+    Use CanRequireAssets;
     /**
      * @var SettingRepository
      */
@@ -46,9 +48,9 @@ class SettingController extends AdminBaseController
 
     public function getModuleSettings(Module $currentModule)
     {
-        $this->assetPipeline->requireJs('selectize.js');
-        $this->assetPipeline->requireCss('selectize.css');
-        $this->assetPipeline->requireCss('selectize-default.css');
+        $this->requireJs('selectize.js');
+        $this->requireCss('selectize.css');
+        $this->requireCss('selectize-default.css');
 
         $this->session->set('module', $currentModule->getLowerName());
 
