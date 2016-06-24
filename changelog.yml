@@ -3,6 +3,7 @@ versions:
     "2.0@unreleased":
         added:
             - Laravel 5.2 compatibility
+            - Add ability to set a plain setting value via <code>Modules\Setting\Support\Settings</code>
         changed:
             - Using new more flexible way of handle permissions via middleware
     "1.14.0":
