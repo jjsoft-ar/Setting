@@ -41,9 +41,8 @@ class SettingController extends AdminBaseController
     {
         $this->setting->createOrUpdate($request->all());
 
-        flash(trans('setting::messages.settings saved'));
-
-        return redirect()->route('dashboard.module.settings', [$this->session->get('module', 'Core')]);
+        return redirect()->route('dashboard.module.settings', [$this->session->get('module', 'Core')])
+            ->withSuccess(trans('setting::messages.settings saved'));
     }
 
     public function getModuleSettings(Module $currentModule)
