@@ -5,7 +5,7 @@ use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 use Modules\Core\Traits\CanRequireAssets;
 use Modules\Setting\Http\Requests\SettingRequest;
 use Modules\Setting\Repositories\SettingRepository;
-use Pingpong\Modules\Module;
+use Nwidart\Modules\Module;
 
 class SettingController extends AdminBaseController
 {
