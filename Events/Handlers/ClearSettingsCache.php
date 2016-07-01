@@ -1,4 +1,6 @@
-<?php namespace Modules\Setting\Events\Handlers;
+<?php
+
+namespace Modules\Setting\Events\Handlers;
 
 use Illuminate\Contracts\Cache\Repository;
 

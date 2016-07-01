@@ -1,4 +1,6 @@
-<?php namespace Modules\Setting\Http\Controllers\Admin;
+<?php
+
+namespace Modules\Setting\Http\Controllers\Admin;
 
 use Illuminate\Session\Store;
 use Modules\Core\Http\Controllers\Admin\AdminBaseController;
@@ -9,7 +11,7 @@ use Nwidart\Modules\Module;
 
 class SettingController extends AdminBaseController
 {
-    Use CanRequireAssets;
+    use CanRequireAssets;
     /**
      * @var SettingRepository
      */

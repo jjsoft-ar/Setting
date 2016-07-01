@@ -1,4 +1,6 @@
-<?php namespace Modules\Setting\Repositories\Cache;
+<?php
+
+namespace Modules\Setting\Repositories\Cache;
 
 use Modules\Core\Repositories\Cache\BaseCacheDecorator;
 use Modules\Setting\Repositories\SettingRepository;

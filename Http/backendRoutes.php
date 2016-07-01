@@ -3,7 +3,6 @@
 use Illuminate\Routing\Router;
 
 /** @var Router $router */
-
 $router->group(['prefix' => '/setting'], function (Router $router) {
     $router->get('settings/{module}', [
         'as' => 'dashboard.module.settings',

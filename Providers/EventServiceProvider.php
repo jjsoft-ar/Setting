@@ -1,4 +1,6 @@
-<?php namespace Modules\Setting\Providers;
+<?php
+
+namespace Modules\Setting\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Modules\Setting\Events\Handlers\ClearSettingsCache;

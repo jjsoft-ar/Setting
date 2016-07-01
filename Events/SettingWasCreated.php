@@ -1,4 +1,6 @@
-<?php namespace Modules\Setting\Events;
+<?php
+
+namespace Modules\Setting\Events;
 
 class SettingWasCreated
 {

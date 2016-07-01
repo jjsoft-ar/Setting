@@ -1,4 +1,6 @@
-<?php namespace Modules\Setting\Tests;
+<?php
+
+namespace Modules\Setting\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Database\Eloquent\Model;

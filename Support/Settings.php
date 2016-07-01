@@ -1,4 +1,6 @@
-<?php namespace Modules\Setting\Support;
+<?php
+
+namespace Modules\Setting\Support;
 
 use Modules\Core\Contracts\Setting;
 use Modules\Setting\Repositories\SettingRepository;

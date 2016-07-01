@@ -1,4 +1,6 @@
-<?php namespace Modules\Setting\Tests;
+<?php
+
+namespace Modules\Setting\Tests;
 
 class SettingsTest extends BaseSettingTest
 {
