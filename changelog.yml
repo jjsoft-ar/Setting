@@ -8,6 +8,7 @@ versions:
             - Using new more flexible way of handle permissions via middleware
         removed:
             - Removing laracasts/flash dependency
+            - <code>Setting</code> contract has been moved to the Setting module
     "1.14.0":
         changed:
             - Use <code>$router</code> variable in routes file
