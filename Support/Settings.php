@@ -2,7 +2,7 @@
 
 namespace Modules\Setting\Support;
 
-use Modules\Core\Contracts\Setting;
+use Modules\Setting\Contracts\Setting;
 use Modules\Setting\Repositories\SettingRepository;
 
 class Settings implements Setting

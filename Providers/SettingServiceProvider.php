@@ -68,7 +68,7 @@ class SettingServiceProvider extends ServiceProvider
             return new CacheSettingDecorator($repository);
         });
         $this->app->bind(
-            \Modules\Core\Contracts\Setting::class,
+            \Modules\Setting\Contracts\Setting::class,
             Settings::class
         );
     }
