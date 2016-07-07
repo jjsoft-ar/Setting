@@ -2,7 +2,7 @@
 
 return [
     'setting.settings' => [
-        'index' => trans('setting::settings.list resource'),
-        'edit' => trans('setting::settings.edit resource'),
+        'index' => 'setting::settings.list resource',
+        'edit' => 'setting::settings.edit resource',
     ],
 ];
