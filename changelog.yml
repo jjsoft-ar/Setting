@@ -4,6 +4,7 @@ versions:
         added:
             - Laravel 5.2 compatibility
             - Add ability to set a plain setting value via <code>Modules\Setting\Support\Settings</code>
+            - new <code>@setting()</code> blade directive
         changed:
             - Using new more flexible way of handle permissions via middleware
         removed:
