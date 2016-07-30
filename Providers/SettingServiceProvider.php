@@ -44,6 +44,7 @@ class SettingServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishConfig('setting', 'permissions');
+        $this->publishConfig('setting', 'config');
     }
 
     /**
