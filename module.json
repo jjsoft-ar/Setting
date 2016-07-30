@@ -16,7 +16,8 @@
         "Modules\\Setting\\Providers\\EventServiceProvider"
     ],
     "aliases": {
-        "Setting": "Modules\\Setting\\Facades\\Settings"
+        "Setting": "Modules\\Setting\\Facades\\Settings",
+        "SettingDirective": "Modules\\Setting\\Blade\\Facades\\SettingDirective"
     },
     "files": [
         "helpers.php"

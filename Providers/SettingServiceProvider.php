@@ -5,6 +5,7 @@ namespace Modules\Setting\Providers;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 use Modules\Core\Traits\CanPublishConfiguration;
+use Modules\Setting\Blade\SettingDirective;
 use Modules\Setting\Entities\Setting;
 use Modules\Setting\Facades\Settings as SettingsFacade;
 use Modules\Setting\Repositories\Cache\CacheSettingDecorator;
@@ -39,12 +40,17 @@ class SettingServiceProvider extends ServiceProvider
             $loader = AliasLoader::getInstance();
             $loader->alias('Settings', SettingsFacade::class);
         });
+
+        $this->app->bind('setting.setting.directive', function () {
+            return new SettingDirective();
+        });
     }
 
     public function boot()
     {
         $this->publishConfig('setting', 'permissions');
         $this->publishConfig('setting', 'config');
+        $this->registerBladeTags();
     }
 
     /**
@@ -72,5 +78,15 @@ class SettingServiceProvider extends ServiceProvider
             \Modules\Setting\Contracts\Setting::class,
             Settings::class
         );
+    }
+
+    private function registerBladeTags()
+    {
+        if (app()->environment() === 'testing') {
+            return;
+        }
+        $this->app['blade.compiler']->directive('setting', function ($value) {
+            return "<?php echo SettingDirective::show(array$value); ?>";
+        });
     }
 }
