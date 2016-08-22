@@ -49,10 +49,6 @@ class SettingController extends AdminBaseController
 
     public function getModuleSettings(Module $currentModule)
     {
-        $this->requireJs('selectize.js');
-        $this->requireCss('selectize.css');
-        $this->requireCss('selectize-default.css');
-
         $this->session->set('module', $currentModule->getLowerName());
 
         $modulesWithSettings = $this->setting->moduleSettings($this->module->enabled());
