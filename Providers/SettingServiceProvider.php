@@ -86,7 +86,7 @@ class SettingServiceProvider extends ServiceProvider
             return;
         }
         $this->app['blade.compiler']->directive('setting', function ($value) {
-            return "<?php echo SettingDirective::show(array$value); ?>";
+            return "<?php echo SettingDirective::show([$value]); ?>";
         });
     }
 }
