@@ -16,7 +16,7 @@
   ],
   "support": {
     "email": "support@asgardcms.com",
-    "issues": "https://github.com/AsgardCms/Setting/issues",
+    "issues": "https://github.com/AsgardCms/Platform/issues",
     "source": "https://github.com/AsgardCms/Setting"
   },
   "require": {
@@ -27,7 +27,7 @@
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",
-    "orchestra/testbench": "~3.1",
+    "orchestra/testbench": "3.3.*",
     "phpro/grumphp": "^0.9.1",
     "friendsofphp/php-cs-fixer": "^1.11"
   },
