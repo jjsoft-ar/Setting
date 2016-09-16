@@ -4,7 +4,7 @@ use Illuminate\Session\Store;
 use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 use Modules\Setting\Http\Requests\SettingRequest;
 use Modules\Setting\Repositories\SettingRepository;
-use Pingpong\Modules\Module;
+use Nwidart\Modules\Module;
 
 class SettingController extends AdminBaseController
 {
